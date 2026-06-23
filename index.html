@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html class="dark" lang="en">
 
 <head>
@@ -8,19 +7,21 @@
     <title>A Gift from BH to AK</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&amp;family=Playfair+Display:wght@400;600;700&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&amp;family=Playfair+Display:wght@400;600;700&amp;family=Great+Vibes&amp;display=swap"
         rel="stylesheet" />
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
+
     <!-- Lenis Smooth Scroll -->
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
-                    "colors": {
+                    colors: {
                         "on-primary": "#21314b",
                         "outline-variant": "#44474d",
                         "on-tertiary-fixed-variant": "#484743",
@@ -69,40 +70,39 @@
                         "on-secondary": "#571f00",
                         "secondary-fixed": "#ffdbcc"
                     },
-                    "borderRadius": {
-                        "DEFAULT": "0.125rem",
-                        "lg": "0.25rem",
-                        "xl": "0.5rem",
-                        "full": "0.75rem"
+                    borderRadius: {
+                        DEFAULT: "0.125rem",
+                        lg: "0.25rem",
+                        xl: "0.5rem",
+                        full: "0.75rem"
                     },
-                    "spacing": {
+                    spacing: {
                         "safe-margin-mobile": "24px",
                         "safe-margin-desktop": "80px",
                         "gutter": "32px",
                         "section-gap": "160px"
                     },
-                    "fontFamily": {
-                        "display-xl": ["Playfair Display"],
-                        "body-md": ["Montserrat"],
-                        "display-lg": ["Playfair Display"],
-                        "body-lg": ["Montserrat"],
-                        "label-caps": ["Montserrat"],
-                        "headline-md": ["Playfair Display"],
-                        "display-lg-mobile": ["Playfair Display"]
+                    fontFamily: {
+                        "display-xl": ["Great Vibes", "Playfair Display", "serif"],
+                        "display-lg": ["Great Vibes", "Playfair Display", "serif"],
+                        "headline-md": ["Great Vibes", "Playfair Display", "serif"],
+                        "body-md": ["Montserrat", "sans-serif"],
+                        "body-lg": ["Montserrat", "sans-serif"],
+                        "label-caps": ["Montserrat", "sans-serif"],
                     },
-                    "fontSize": {
-                        "display-xl": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
-                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
-                        "display-lg": ["48px", { "lineHeight": "1.2", "fontWeight": "700" }],
-                        "body-lg": ["18px", { "lineHeight": "1.8", "letterSpacing": "0.01em", "fontWeight": "400" }],
-                        "label-caps": ["12px", { "lineHeight": "1.5", "letterSpacing": "0.2em", "fontWeight": "600" }],
-                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
-                        "display-lg-mobile": ["36px", { "lineHeight": "1.2", "fontWeight": "700" }]
+                    fontSize: {
+                        "display-xl": ["78px", { "lineHeight": "1.05", "letterSpacing": "-0.04em", "fontWeight": "400" }],
+                        "display-lg": ["52px", { "lineHeight": "1.1", "letterSpacing": "-0.03em", "fontWeight": "400" }],
+                        "headline-md": ["38px", { "lineHeight": "1.15", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.7", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.75", "letterSpacing": "0.01em", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "1.5", "letterSpacing": "0.25em", "fontWeight": "600" }]
                     }
                 }
             }
         }
     </script>
+
     <style>
         /* Lenis basic setup */
         html.lenis,
@@ -154,7 +154,6 @@
         .bg-layer {
             position: absolute;
             inset: -10%;
-            /* Room for scale & parallax */
             width: 120%;
             height: 120%;
             background-size: cover;
@@ -167,9 +166,21 @@
         .content-overlay {
             position: relative;
             z-index: 10;
-            text-align: center;
             padding: 2rem;
             max-width: 900px;
+        }
+
+        /* Cursive Typography */
+        .cursive-title {
+            font-family: "Great Vibes", cursive;
+            font-weight: 400;
+            letter-spacing: -0.04em;
+            text-shadow: 0 4px 25px rgba(0, 0, 0, 0.65);
+        }
+
+        .romantic-text {
+            font-family: "Great Vibes", cursive;
+            text-shadow: 0 4px 20px rgba(236, 72, 153, 0.4);
         }
 
         /* Scroll Animation Styles */
@@ -205,12 +216,10 @@
             filter: blur(0);
         }
 
-        /* Smooth scrolling fallback */
         html {
             scroll-behavior: smooth;
         }
 
-        /* Typography overrides for better readability */
         .text-subtitle {
             font-size: 1rem;
             line-height: 1.5;
@@ -243,267 +252,229 @@
     <main>
         <!-- Hero Intro -->
         <section class="scene-container feather-bottom">
-            <div class="bg-layer parallax-bg"
-                data-alt="A breathtaking twilight sky over a serene Bengali landscape, with deep purples and warm oranges reflecting off a calm river. The mood is highly cinematic and deeply romantic, setting the stage for an epic love story. The lighting is soft and ethereal, with subtle atmospheric haze in the distance."
-                data-speed="0.2" style='background-image: url("images/hero.jpg");'>
-            </div>
+            <div class="bg-layer parallax-bg" data-alt="A breathtaking twilight sky..." data-speed="0.2"
+                style='background-image: url("images/hero.jpg");'></div>
             <div class="content-overlay">
-                <div class="fade-in-section is-visible">
-                    <h1 class="font-display-xl text-display-xl text-on-surface mb-6 drop-shadow-lg">A LOVE STORY</h1>
+                <div class="fade-in-section is-visible text-center">
+                    <h1
+                        class="cursive-title text-[5.8rem] md:text-[7.5rem] leading-none text-on-surface mb-6 drop-shadow-2xl">
+                        A Love Story
+                    </h1>
+                    <hr>
                     <p class="font-body-lg text-description text-sky drop-shadow-md max-w-2xl mx-auto">
                         A cinematic journey through the hidden layers of our reality.
-                        <br />
                         Discover what lies beyond the twilight.
-                        <br />
                     </p>
-                    <span
-                        class="text-sm font-bold tracking-widest text-secondary mt-8 block uppercase drop-shadow-md">Please
-                        Scroll Down</span>
+                    <span class="text-sm font-bold tracking-widest text-secondary mt-10 block uppercase drop-shadow-md">
+                        Please Scroll Down
+                    </span>
                 </div>
             </div>
         </section>
-        <!-- Chapter 1: TheSmile -->
+
+        <!-- Chapter 1 -->
         <section class="scene-container feather-both" id="scene-1">
-            <div class="bg-layer parallax-bg"
-                data-alt="A softly blurred, cinematic close-up of a rustic wooden table in a dimly lit cafe, with a single warm, glowing pendant light overhead casting a gentle halo. The background is a wash of deep teal and soft amber hues, creating an intimate, dreamlike atmosphere. The focus is soft, prioritizing emotional resonance over sharp detail."
-                data-speed="0.15" style='background-image: url("images/1.jpg");'>
-            </div>
+            <div class="bg-layer parallax-bg" data-speed="0.15" style='background-image: url("images/1.jpg");'></div>
             <div class="content-overlay text-left w-full max-w-5xl px-safe-margin-mobile md:px-safe-margin-desktop">
                 <div class="fade-in-section">
-                    <h2 class="font-display-xl text-display-xl text-white drop-shadow-lg mb-2 md:text-[6rem]">TheSmile
-                    </h2>
-                    <p class="font-label-caps text-subtitle text-secondary drop-shadow-md mb-6 uppercase">A SMILE THAT
-                        SAID MORE THAN WORDS</p>
+                    <h2 class="cursive-title text-display-xl text-white mb-3">The Smile</h2>
+                    <p class="font-label-caps text-subtitle text-secondary drop-shadow-md mb-6 uppercase">A smile that
+                        said more than words</p>
                     <p class="font-body-md text-description text-gray-100 drop-shadow-md max-w-2xl">Neither spoke, but
                         the warmth on your face revealed everything your heart wanted to hide.</p>
                 </div>
             </div>
         </section>
-        <!-- Chapter 2: TheWait -->
+
+        <!-- Chapter 2 -->
         <section class="scene-container feather-both" id="scene-2">
-            <div class="bg-layer parallax-bg"
-                data-alt="A cinematic, wide-angle shot of a deserted train platform at dusk, with soft rain lightly falling. The scene is illuminated by the cool, ethereal glow of a single platform lamp, contrasting with the deep indigo of the twilight sky. The mood is melancholic yet hopeful, emphasizing a sense of patient longing."
-                data-speed="0.2" style='background-image: url("images/2.jpg");'>
-            </div>
+            <div class="bg-layer parallax-bg" data-speed="0.2" style='background-image: url("images/2.jpg");'></div>
             <div
                 class="content-overlay text-right w-full max-w-5xl px-safe-margin-mobile md:px-safe-margin-desktop ml-auto">
                 <div class="fade-in-section flex flex-col items-end text-right">
-                    <h2 class="font-display-xl text-display-xl text-white drop-shadow-lg mb-2 md:text-[6rem]">TheWait
-                    </h2>
-                    <p class="font-label-caps text-subtitle text-secondary drop-shadow-md mb-6 uppercase">COUNTING DAYS
-                        UNTIL FRIDAYS</p>
+                    <h2 class="cursive-title text-display-xl text-white mb-3">The Wait</h2>
+                    <p class="font-label-caps text-subtitle text-secondary drop-shadow-md mb-6 uppercase">Counting days
+                        until Fridays</p>
                     <p class="font-body-md text-description text-gray-100 drop-shadow-md max-w-2xl">Every weekend became
                         a promise that perhaps we would meet again...</p>
                 </div>
             </div>
         </section>
-        <!-- Chapter 3: ASign -->
+
+        <!-- Chapter 3 -->
         <section class="scene-container feather-both" id="scene-3">
-            <div class="bg-layer parallax-bg"
-                data-alt="A moody, atmospheric shot of a rain-slicked city street reflecting the blurred, neon lights of distant storefronts. A solitary, bright yellow leaf floats on a puddle in the foreground, acting as a focal point against the dark, moody blue-grey tones of the wet pavement. The overall feel is mysterious and serendipitous."
-                data-speed="0.15" style='background-image: url("images/3.jpg");'>
-            </div>
+            <div class="bg-layer parallax-bg" data-speed="0.15" style='background-image: url("images/3.jpg");'></div>
             <div class="content-overlay text-left w-full max-w-5xl px-safe-margin-mobile md:px-safe-margin-desktop">
                 <div class="fade-in-section">
-                    <h2 class="font-display-xl text-display-xl text-white drop-shadow-lg mb-2 md:text-[6rem]">ASign</h2>
-                    <p class="font-label-caps text-subtitle text-secondary drop-shadow-md mb-6 uppercase">FATE LEAVES
-                        CLUES FOR THOSE WHO NOTICE</p>
+                    <h2 class="cursive-title text-display-xl text-white mb-3">A Sign</h2>
+                    <p class="font-label-caps text-subtitle text-secondary drop-shadow-md mb-6 uppercase">Fate leaves
+                        clues for those who notice</p>
                     <p class="font-body-md text-description text-gray-100 drop-shadow-md max-w-2xl">A glance across the
                         street, and suddenly coincidence felt impossible.</p>
                 </div>
             </div>
         </section>
-        <!-- Chapter 4: YourHand -->
+
+        <!-- Chapter 4 -->
         <section class="scene-container feather-both" id="scene-4">
-            <div class="bg-layer parallax-bg"
-                data-alt="A deeply cinematic, close-up shot focusing entirely on the silhouette of two hands gently touching against the backdrop of a vibrant, warm sunset. The lighting is strong backlighting, creating a glowing rim effect around the hands, while the background dissolves into abstract bokeh circles of orange, red, and deep violet."
-                data-speed="0.2" style='background-image: url("images/4.jpg");'>
-            </div>
+            <div class="bg-layer parallax-bg" data-speed="0.2" style='background-image: url("images/4.jpg");'></div>
             <div
                 class="content-overlay text-right w-full max-w-5xl px-safe-margin-mobile md:px-safe-margin-desktop ml-auto">
                 <div class="fade-in-section flex flex-col items-end text-right">
-                    <h2 class="font-display-xl text-display-xl text-white drop-shadow-lg mb-2 md:text-[6rem]">YourHand
-                    </h2>
-                    <p class="font-label-caps text-subtitle text-secondary drop-shadow-md mb-6 uppercase">THE SMALLEST
-                        GESTURE CARRIED THE GREATEST MEANING</p>
+                    <h2 class="cursive-title text-display-xl text-white mb-3">Your Hand</h2>
+                    <p class="font-label-caps text-subtitle text-secondary drop-shadow-md mb-6 uppercase">The smallest
+                        gesture carried the greatest meaning</p>
                     <p class="font-body-md text-description text-gray-100 drop-shadow-md max-w-2xl">First handshake, our
                         hands met for the first time, dissolving every lingering doubt.</p>
                 </div>
             </div>
         </section>
-        <!-- Chapter 5: TheChats -->
+
+        <!-- Chapter 5 -->
         <section class="scene-container feather-both" id="scene-5">
-            <div class="bg-layer parallax-bg"
-                data-alt="An abstract, high-contrast image depicting a cascade of glowing, ethereal digital particles floating upwards against a pitch-black background. The particles resemble subtle, stylized text or messages dissolving into light. The color palette is dominated by deep blues and bright, luminescent cyan highlights, conveying modern communication with a magical touch."
-                data-speed="0.15" style='background-image: url("images/5.jpg");'>
-            </div>
+            <div class="bg-layer parallax-bg" data-speed="0.15" style='background-image: url("images/5.jpg");'></div>
             <div class="content-overlay text-left w-full max-w-5xl px-safe-margin-mobile md:px-safe-margin-desktop">
                 <div class="fade-in-section">
-                    <h2 class="font-display-xl text-display-xl text-white drop-shadow-lg mb-2 md:text-[6rem]">TheChats
-                    </h2>
-                    <p class="font-label-caps text-subtitle text-secondary drop-shadow-md mb-6 uppercase">EVERY MESSAGE
-                        CARRIED AN UNSPOKEN EMOTION</p>
+                    <h2 class="cursive-title text-display-xl text-white mb-3">The Chats</h2>
+                    <p class="font-label-caps text-subtitle text-secondary drop-shadow-md mb-6 uppercase">Every message
+                        carried an unspoken emotion</p>
                     <p class="font-body-md text-description text-gray-100 drop-shadow-md max-w-2xl">The shared laughter,
                         and thoughtful pauses slowly turned simple texts into a bond...</p>
                 </div>
             </div>
         </section>
-        <!-- Chapter 6: TheCalls -->
+
+        <!-- Chapter 6 -->
         <section class="scene-container feather-both" id="scene-6">
-            <div class="bg-layer parallax-bg" data-alt="Cinematic phone call glow" data-speed="0.2"
-                style='background-image: url("images/6.png");'>
-            </div>
+            <div class="bg-layer parallax-bg" data-speed="0.2" style='background-image: url("images/6.png");'></div>
             <div
                 class="content-overlay text-right w-full max-w-5xl px-safe-margin-mobile md:px-safe-margin-desktop ml-auto">
                 <div class="fade-in-section flex flex-col items-end text-right">
-                    <h2 class="font-display-xl text-display-xl text-white drop-shadow-lg mb-2 md:text-[6rem]">TheCalls
-                    </h2>
-                    <p class="font-label-caps text-subtitle text-secondary drop-shadow-md mb-6 uppercase">HOURS TURNED
-                        INTO SECONDS</p>
+                    <h2 class="cursive-title text-display-xl text-white mb-3">The Calls</h2>
+                    <p class="font-label-caps text-subtitle text-secondary drop-shadow-md mb-6 uppercase">Hours turned
+                        into seconds</p>
                     <p class="font-body-md text-description text-gray-100 drop-shadow-md max-w-2xl">The conversations
                         turned ordinary moments into unforgettable memories.</p>
                 </div>
             </div>
         </section>
-        <!-- Chapter 7: Rain -->
+
+        <!-- Chapter 7 -->
         <section class="scene-container feather-both" id="scene-7">
-            <div class="bg-layer parallax-bg" data-alt="Cinematic rain drops" data-speed="0.15"
-                style='background-image: url("images/7.jpg");'>
-            </div>
+            <div class="bg-layer parallax-bg" data-speed="0.15" style='background-image: url("images/7.jpg");'></div>
             <div class="content-overlay text-left w-full max-w-5xl px-safe-margin-mobile md:px-safe-margin-desktop">
                 <div class="fade-in-section">
-                    <h2 class="font-display-xl text-display-xl text-white drop-shadow-lg mb-2 md:text-[6rem]">Rain</h2>
-                    <p class="font-label-caps text-subtitle text-secondary drop-shadow-md mb-6 uppercase">SOME MEMORIES
-                        ARRIVE WITH THE CLOUDS</p>
+                    <h2 class="cursive-title text-display-xl text-white mb-3">Rain</h2>
+                    <p class="font-label-caps text-subtitle text-secondary drop-shadow-md mb-6 uppercase">Some memories
+                        arrive with the clouds</p>
                     <p class="font-body-md text-description text-gray-100 drop-shadow-md max-w-2xl">Me in a raincoat
                         with my cycle, you under an umbrella...</p>
                 </div>
             </div>
         </section>
-        <!-- Chapter 8: FirstVideoCall -->
+
+        <!-- Chapter 8 -->
         <section class="scene-container feather-both" id="scene-8">
-            <div class="bg-layer parallax-bg" data-alt="Cinematic laptop screen glow" data-speed="0.2"
-                style='background-image: url("images/8.jpg");'>
-            </div>
+            <div class="bg-layer parallax-bg" data-speed="0.2" style='background-image: url("images/8.jpg");'></div>
             <div class="content-overlay text-left w-full max-w-5xl px-safe-margin-mobile md:px-safe-margin-desktop">
                 <div class="fade-in-section">
-                    <h2 class="font-display-xl text-display-xl text-white drop-shadow-lg mb-2 md:text-[6rem]">
-                        FirstVideoCall</h2>
-                    <p class="font-label-caps text-subtitle text-secondary drop-shadow-md mb-6 uppercase">SEEING EACH
-                        OTHER BEYOND THE SCREEN</p>
+                    <h2 class="cursive-title text-display-xl text-white mb-3">First Video Call</h2>
+                    <p class="font-label-caps text-subtitle text-secondary drop-shadow-md mb-6 uppercase">Seeing each
+                        other beyond the screen</p>
                     <p class="font-body-md text-description text-gray-100 drop-shadow-md max-w-2xl">For the first time,
                         smiles replaced messages and silence felt closer than ever.</p>
                 </div>
             </div>
         </section>
-        <!-- Chapter 9: Support -->
+
+        <!-- Chapter 9 -->
         <section class="scene-container feather-both" id="scene-9">
-            <div class="bg-layer parallax-bg" data-alt="Cinematic holding hands support" data-speed="0.15"
-                style='background-image: url("images/9.jpg");'>
-            </div>
+            <div class="bg-layer parallax-bg" data-speed="0.15" style='background-image: url("images/9.jpg");'></div>
             <div
                 class="content-overlay text-right w-full max-w-5xl px-safe-margin-mobile md:px-safe-margin-desktop ml-auto">
                 <div class="fade-in-section flex flex-col items-end text-right">
-                    <h2 class="font-display-xl text-display-xl text-white drop-shadow-lg mb-2 md:text-[6rem]">Support
-                    </h2>
-                    <p class="font-label-caps text-subtitle text-secondary drop-shadow-md mb-6 uppercase">A PILLAR IN
-                        THE DARKEST TIMES</p>
+                    <h2 class="cursive-title text-display-xl text-white mb-3">Support</h2>
+                    <p class="font-label-caps text-subtitle text-secondary drop-shadow-md mb-6 uppercase">A pillar in
+                        the darkest times</p>
                     <p class="font-body-md text-description text-gray-100 drop-shadow-md max-w-2xl">No matter how
                         difficult the days became, we were always there for one another.</p>
                 </div>
             </div>
         </section>
-        <!-- Chapter 10: ThePromise -->
+
+        <!-- Chapter 10 -->
         <section class="scene-container feather-both" id="scene-10">
-            <div class="bg-layer parallax-bg" data-alt="Cinematic sunrise promise" data-speed="0.2"
-                style='background-image: url("images/10.jpg");'>
-            </div>
+            <div class="bg-layer parallax-bg" data-speed="0.2" style='background-image: url("images/10.jpg");'></div>
             <div class="content-overlay text-left w-full max-w-5xl px-safe-margin-mobile md:px-safe-margin-desktop">
                 <div class="fade-in-section">
-                    <h2 class="font-display-xl text-display-xl text-white drop-shadow-lg mb-2 md:text-[6rem]">ThePromise
-                    </h2>
-                    <p class="font-label-caps text-subtitle text-secondary drop-shadow-md mb-6 uppercase">WORDS THAT
-                        BOUND TWO SOULS</p>
+                    <h2 class="cursive-title text-display-xl text-white mb-3">The Promise</h2>
+                    <p class="font-label-caps text-subtitle text-secondary drop-shadow-md mb-6 uppercase">Words that
+                        bound two souls</p>
                     <p class="font-body-md text-description text-gray-100 drop-shadow-md max-w-2xl">We promised nothing
                         extraordinary—only to keep choosing each other every single day.</p>
                 </div>
             </div>
         </section>
-        <!-- Chapter 11: Forever -->
+
+        <!-- Chapter 11 -->
         <section class="scene-container feather-both" id="scene-11">
-            <div class="bg-layer parallax-bg"
-                data-alt="A breathtaking, expansive landscape shot at dawn, featuring rolling hills shrouded in a soft, low-lying mist. The early morning sun casts long, golden shadows, illuminating the scene with a sense of renewal and infinite possibility. The sky is a vast expanse of pale pinks and soft blues. The mood is profoundly peaceful and timeless."
-                data-speed="0.15" style='background-image: url("images/11.jpg");'>
-            </div>
+            <div class="bg-layer parallax-bg" data-speed="0.15" style='background-image: url("images/11.jpg");'></div>
             <div class="content-overlay text-center w-full max-w-4xl mx-auto px-safe-margin-mobile">
                 <div class="fade-in-section">
-                    <h2 class="font-display-xl text-display-xl text-white drop-shadow-lg mb-2 md:text-[6rem]">Forever
-                    </h2>
-                    <p class="font-label-caps text-subtitle text-secondary drop-shadow-md mb-6 uppercase">AND THE STORY
-                        QUIETLY CONTINUES</p>
+                    <h2 class="cursive-title text-display-xl text-white mb-3">Forever</h2>
+                    <p class="font-label-caps text-subtitle text-secondary drop-shadow-md mb-6 uppercase">And the story
+                        quietly continues</p>
                     <p class="font-body-md text-description text-gray-100 drop-shadow-md max-w-2xl mx-auto">Some endings
                         are simply the beginning of another chapter waiting to be written.</p>
                 </div>
             </div>
         </section>
-        <!-- Chapter 12: Special Moment -->
+
+        <!-- Special Moment -->
         <section class="scene-container feather-both" id="scene-special">
-            <div class="bg-layer parallax-bg" data-speed="0.2" style='background-image: url("images/12.jpg");'>
-            </div>
+            <div class="bg-layer parallax-bg" data-speed="0.2" style='background-image: url("images/12.jpg");'></div>
             <div class="content-overlay text-center w-full max-w-4xl mx-auto px-safe-margin-mobile">
                 <div class="fade-in-section">
-                    <h2 class="font-display-xl text-display-xl text-white drop-shadow-lg mb-2 md:text-[6rem]">Special
-                        Moment</h2>
-                    <br>
-                    <br>
-                    <br>
-                    <p class="font-headline-md text-headline-md italic drop-shadow-md">
-                        <span class="text-blue-700">Happy Anniversary</span>
-                        <span class="text-pink-400">My Sweet Arpita</span>
-                        💙
+                    <!-- <h2 class="cursive-title text-display-m text-white mb-8">Special Moment</h2>-->
+                    <p class="romantic-text text-10xl md:text-7xl leading-tight text-blue-900">
+                        Happy Anniversary<br>
+                        My Sweet Arpita
                     </p>
+                    <p class="text-6xl mt-6">💙</p>
                 </div>
             </div>
         </section>
-        <!-- Chapter 13: The End -->
+
+        <!-- The End -->
         <section class="scene-container feather-top" id="scene-12">
-            <div class="bg-layer parallax-bg" data-alt="Cinematic deep space starry night" data-speed="0.1"
-                style='background-image: url("images/13.jpg");'>
-            </div>
+            <div class="bg-layer parallax-bg" data-speed="0.1" style='background-image: url("images/13.jpg");'></div>
             <div class="content-overlay text-center w-full max-w-4xl mx-auto px-safe-margin-mobile">
                 <div class="fade-in-section">
-                    <h2
-                        class="font-display-xl text-display-xl tracking-[0.2em] text-white drop-shadow-lg mb-4 uppercase">
-                        The End</h2>
-                    <p class="font-headline-md text-headline-md italic text-gray-200 drop-shadow-md">Or just the
-                        beginning</p>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <p class="font-XXL text-description text-gray-100">
+                    <h2 class="cursive-title text-[5.2rem] md:text-[6.8rem] text-white tracking-wider mb-4">The End</h2>
+                    <p class="font-headline-md text-headline-md italic text-gray-200 mb-12">Or just the beginning...</p>
+                    <p class="text-4xl md:text-5xl font-bold text-blue-100">
                         I Love you,
-                        <span class="text-pink-400">Arpita</span>
-                        💙
+                        <span class="text-pink-400">Arpita</span> 💙
                     </p>
+                    <br>
+                    <br><br><br> <br><br><br>
+                    <hr>
+                    <p aria-colspan="romantic-text text-10xl md:text-display-m leading-tight text-sky-100">
+                        A Gift From
+                        Your Love...</p>
                 </div>
             </div>
         </section>
     </main>
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Initialize Lenis for smooth scrolling
             const lenis = new Lenis({
                 duration: 1.5,
                 easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-                direction: 'vertical',
-                gestureDirection: 'vertical',
                 smooth: true,
-                smoothTouch: false,
-                touchMultiplier: 2,
             });
 
-            // Parallax Effect Logic
             const parallaxBgs = document.querySelectorAll('.parallax-bg');
 
             function raf(time) {
@@ -512,15 +483,13 @@
             }
             requestAnimationFrame(raf);
 
-            lenis.on('scroll', (e) => {
+            lenis.on('scroll', () => {
                 const scrollY = window.scrollY;
                 const windowHeight = window.innerHeight;
 
                 parallaxBgs.forEach(bg => {
                     const rect = bg.parentElement.getBoundingClientRect();
                     const centerOffset = rect.top + (rect.height / 2) - (windowHeight / 2);
-
-                    // Only animate if in or near viewport
                     if (Math.abs(centerOffset) < windowHeight * 1.5) {
                         const speed = parseFloat(bg.getAttribute('data-speed')) || 0.15;
                         const yPos = centerOffset * speed;
@@ -529,28 +498,18 @@
                 });
             });
 
-            // 1. IntersectionObserver for Section Fade-In Effect
-            const fadeOptions = {
-                root: null,
-                threshold: 0.35, // Trigger when 35% is visible
-                rootMargin: "0px"
-            };
-
-            const fadeObserver = new IntersectionObserver((entries, observer) => {
+            // Fade-in observer
+            const fadeObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         const fadeSection = entry.target.querySelector('.fade-in-section');
-                        if (fadeSection) {
-                            fadeSection.classList.add('is-visible');
-                        }
-                        // Stop observing once animated
-                        observer.unobserve(entry.target);
+                        if (fadeSection) fadeSection.classList.add('is-visible');
+                        fadeObserver.unobserve(entry.target);
                     }
                 });
-            }, fadeOptions);
+            }, { threshold: 0.35 });
 
-            const scenes = document.querySelectorAll('.scene-container');
-            scenes.forEach(scene => {
+            document.querySelectorAll('.scene-container').forEach(scene => {
                 fadeObserver.observe(scene);
             });
         });
